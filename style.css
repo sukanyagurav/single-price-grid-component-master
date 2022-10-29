@@ -74,10 +74,9 @@ section{
     background-color: var(--primary-color);
 
 }
-.subscription h2,
-.whyUs h2{
+ h2{
     font-size: 2rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.8rem;
     
 }
 .subscription .price {
