@@ -76,13 +76,14 @@ section{
 }
  h2{
     font-size: 2rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
     
 }
 .subscription .price {
     font-size: 3rem;
     display: flex;
     align-items: center;
+    font-weight: 700;
     
 }
 .subscription .value {
@@ -102,8 +103,9 @@ section{
     font-weight: 300;
     margin-left: 1.2rem;
 }
-.subscription p{
+.subscription p:last-of-type{
     font-size: 1.55rem;
+    margin-top: 1.8rem;
     margin-bottom: 3rem;
 }
 .subscription a{
