@@ -74,8 +74,8 @@ section{
     background-color: var(--primary-color);
 
 }
-.subscription h3,
-.whyUs h4{
+.subscription h2,
+.whyUs h2{
     font-size: 2rem;
     margin-bottom: 1.3rem;
     
