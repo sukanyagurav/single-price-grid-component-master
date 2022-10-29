@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root{
+    --primary-color:hsl(179, 62%, 43%);
+    --secondary-color:hsl(71, 73%, 54%);
+    --light-grey: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Karla',sans-serif;
+    background-color: var(--light-grey);
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+section{
+    display:flex;
+    flex-direction: column;
+    margin:3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px rgb(0 0 0 / 9%);
+}
+.community {
+    padding:3.5rem 8rem 3rem 4rem ;
+    background-color:#fff;
+    display: grid;
+    line-height: 1.5;
+    border-radius: 10px 10px 0 0;
+    grid-template-rows: 1fr 35px 50px;
+}
+.community h1{
+    font-size: 3rem;
+    color:var(--primary-color);
+    font-weight: 700;
+   margin-bottom: 1rem;
+}
+  
+.community p:first-of-type{
+    font-size:1.85rem ;
+    color:var(--secondary-color);
+    font-weight: 700;
+
+}
+.community p:last-of-type{
+    font-size: 1.45rem;
+    max-width: 525px;
+    font-weight: 550;
+ color:var(--Grayish-Blue);
+}
+.subscription__content{
+    display: flex;
+    border-radius: 0 0 10px 10px;
+}
+.subscription,
+.whyUs{
+    flex-basis: 50%;
+    color: var(--light-grey);
+    padding:4rem;
+}
+.subscription{
+    border-radius: 0 0 0 10px;
+    background-color: var(--primary-color);
+
+}
+.subscription h3,
+.whyUs h4{
+    font-size: 2rem;
+    margin-bottom: 1.3rem;
+    
+}
+.subscription .price {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    
+}
+.subscription .value {
+    animation: bounce 1s ease 2;
+    -webkit-animation: bounce 1s ease 2;
+}
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.subscription .price .month{
+    font-size: 1.9rem;
+    color: var(--light-grey);
+    opacity:0.65;
+    font-weight: 300;
+    margin-left: 1.2rem;
+}
+.subscription p{
+    font-size: 1.55rem;
+    margin-bottom: 3rem;
+}
+.subscription a{
+    text-decoration: none;
+    display: block;
+    background-color: var(--secondary-color);
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.3rem 4rem;
+    color:#fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 8px rgb(0 0 0 / 9%);
+}
+.subscription a:hover{
+    background-color: rgba(198, 240, 13, 0.815);;
+}
+.subscription a:focus {
+    outline: none;
+    animation: pulsate 1s infinite; 
+    -webkit-animation: pulsate 1s infinite;
+}
+@keyframes pulsate {
+    0% {
+      transform: scale(1);
+      box-shadow: none;
+     }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+     }
+    100% {
+      transform: scale(1);
+      box-shadow: none; 
+    }
+    
+}
+.whyUs{
+    background-color:hsla(179, 62%, 43%,0.8);
+    border-radius: 0 0 10px 0;
+}
+.whyUs li{
+    list-style-type: none;
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+.whyUs li::before{
+    content:'\2638';
+    color:var(--secondary-color);
+    margin-right: 1rem;
+
+}
+.whyUs li:not(:last-child){
+    margin-bottom: 0.5em;
+}
+@media (max-width:650px) {
+   section{
+    flex-direction: column;
+    border-radius: 10px 10px 0 0; 
+    max-width:350px;
+    padding:0;
+   margin:3em 4em;
+}
+   .community{
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.community p:first-of-type{
+   margin-bottom: 2rem;
+   margin-top: 0.5rem;
+
+}
+.community p:last-of-type{
+    margin-bottom: 2rem;
+ }
+   .subscription__content{
+    flex-direction: column;
+    border-radius: 0 10px  0 0;
+    padding:0;
+   }
+   .subscription{
+    border-radius: 0;
+    padding:2rem;
+   }
+   .whyUs{
+    padding:2rem;
+    border-radius: 0 0 10px 10px;
+}
+}
